@@ -8,6 +8,7 @@ import { RouterModule, Routes} from '@angular/router';
 import { OctoprintVAComponent } from './octoprint-va/octoprint-va.component';
 import { OctoprintVaTosComponent } from './octoprint-va-tos/octoprint-va-tos.component';
 import { OctoprintVaPrivacyComponent } from './octoprint-va-privacy/octoprint-va-privacy.component';
+import { DadsSiteComponent } from './dads-site/dads-site.component';
 
 @NgModule({
   declarations: [
@@ -16,12 +17,14 @@ import { OctoprintVaPrivacyComponent } from './octoprint-va-privacy/octoprint-va
     HomeComponent,
     OctoprintVAComponent,
     OctoprintVaTosComponent,
-    OctoprintVaPrivacyComponent
+    OctoprintVaPrivacyComponent,
+    DadsSiteComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       {path: '', component: HomeComponent},
+      {path: 'scottsappliance', component: DadsSiteComponent},
       {path: 'octoprintva', component: OctoprintVAComponent},
       {path: 'octoprintva/tos', component: OctoprintVaTosComponent},
       {path: 'octoprintva/privacy', component: OctoprintVaPrivacyComponent}
