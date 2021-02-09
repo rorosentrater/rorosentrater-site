@@ -10,6 +10,8 @@ import { OctoprintComponent } from './octoprint/octoprint.component';
 import { ScottsapplianceComponent } from './scottsappliance/scottsappliance.component';
 import { OctoprintPrivacyComponent } from './octoprint-privacy/octoprint-privacy.component';
 import { OctoprintTosComponent } from './octoprint-tos/octoprint-tos.component';
+import { EmailMeComponent } from './email-me/email-me.component';
+import {RecaptchaModule} from 'ng-recaptcha';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,13 @@ import { OctoprintTosComponent } from './octoprint-tos/octoprint-tos.component';
     OctoprintComponent,
     ScottsapplianceComponent,
     OctoprintPrivacyComponent,
-    OctoprintTosComponent
+    OctoprintTosComponent,
+    EmailMeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RecaptchaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

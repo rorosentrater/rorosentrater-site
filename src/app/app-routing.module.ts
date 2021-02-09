@@ -5,6 +5,7 @@ import { OctoprintComponent } from './octoprint/octoprint.component';
 import { OctoprintPrivacyComponent } from './octoprint-privacy/octoprint-privacy.component';
 import { OctoprintTosComponent } from './octoprint-tos/octoprint-tos.component';
 import { ScottsapplianceComponent } from './scottsappliance/scottsappliance.component';
+import { EmailMeComponent } from './email-me/email-me.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'octoprint-alexa/privacy', component: OctoprintPrivacyComponent },
   { path: 'octoprint-alexa/tos', component: OctoprintTosComponent },
   { path: 'scotts-appliance', component: ScottsapplianceComponent },
+  { path: 'hire-me', component: EmailMeComponent },
 
   { path: 'home', component: HomeComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }, // Default route for www.site.com

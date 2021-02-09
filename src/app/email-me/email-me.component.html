@@ -1,0 +1,42 @@
+<div class="row text-center">
+  <h1>Business Inquiries</h1>
+  <p>Got a job of the software variety that needs doing? Get in touch!</p>
+</div>
+<form>
+  <div class="row my-3">
+    <div class="col-sm-12 col-md-6">
+      <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+    </div>
+  </div>
+  <div class="row my-3">
+    <div class="col">
+      <input type="email" class="form-control" aria-label="Email" placeholder="Email">
+    </div>
+  </div>
+  <div class="row my-3">
+    <div class="col">
+      <input type="tel" class="form-control" aria-label="Phone number" placeholder="Phone number (optional)">
+    </div>
+  </div>
+  <div class="row my-3">
+    <div class="col">
+      <textarea class="form-control" aria-label="Message" placeholder="Message..."></textarea>
+    </div>
+  </div>
+
+
+  <div class="row my-3">
+    <div class="text-center" [ngClass]="this.captcha ? 'col-6':'col-12'">
+      <re-captcha class="recaptcha" (resolved)="resolved($event)" siteKey="6Le08k8aAAAAANd1HfizOmnspxgrE5fw_f_bVBcI"></re-captcha>
+    </div>
+    <div class="text-center submit-col" [ngClass]="this.captcha ? 'col-6':'hidden-col'">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</form>
+
+
+

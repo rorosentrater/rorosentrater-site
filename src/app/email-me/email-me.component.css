@@ -1,0 +1,23 @@
+.recaptcha {
+  display: inline-block;
+}
+
+.col-6, .col-12 {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: visibility 1s, opacity 2s 1s linear, width 1s ease;
+  -moz-transition: visibility 1s, opacity 2s 1s linear, width 1s ease;
+  -o-transition: visibility 1s, opacity 2s 1s linear, width 1s ease;
+  transition: visibility 1s, opacity 2s 1s linear, width 1s ease;
+}
+
+.hidden-col {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.submit-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
