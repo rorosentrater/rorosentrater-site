@@ -4,7 +4,7 @@ import {RecaptchaService} from '../services/recaptcha/recaptcha.service';
 @Component({
   selector: 'app-email-me',
   templateUrl: './email-me.component.html',
-  styleUrls: ['./email-me.component.css']
+  styleUrls: ['./email-me.component.scss']
 })
 export class EmailMeComponent implements OnInit {
 
