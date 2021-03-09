@@ -26,3 +26,20 @@ writeFile(targetPath, envConfigFile, function (err) {
     console.log(colors.magenta(`Angular environment.ts file generated correctly at ${targetPath} \n`));
   }
 });
+
+const prodTargetPath = './src/environments/environment.prod.ts';
+
+const prodEnvConfigFile = `export const environment = {
+   backendEndpoint: '${process.env.BACKEND_ENDPOINT}',
+   production: true
+};
+`;
+console.log(colors.magenta('The file `environment.prod.ts` will be written with the following content: \n'));
+console.log(colors.grey(prodEnvConfigFile));
+writeFile(prodTargetPath, prodEnvConfigFile, function (err) {
+  if (err) {
+    throw console.error(err);
+  } else {
+    console.log(colors.magenta(`Angular environment.prod.ts file generated correctly at ${prodTargetPath} \n`));
+  }
+});
