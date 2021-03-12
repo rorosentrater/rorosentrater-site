@@ -2,28 +2,28 @@
   <h1>Business Inquiries</h1>
   <p>Got a job of the software variety that needs doing? Get in touch!</p>
 </div>
-<form>
+<form #hireMeForm="ngForm" (ngSubmit)="submit(hireMeForm)" ngNativeValidate>
   <div class="row my-3">
     <div class="col-sm-12 col-md-6">
-      <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+      <input required type="text" class="form-control" placeholder="First name" aria-label="First name" ngModel name="fname" #fname="ngModel">
     </div>
     <div class="col-sm-12 col-md-6">
-      <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+      <input required type="text" class="form-control" placeholder="Last name" aria-label="Last name" ngModel name="lname" #lname="ngModel">
     </div>
   </div>
   <div class="row my-3">
     <div class="col">
-      <input type="email" class="form-control" aria-label="Email" placeholder="Email">
+      <input required type="email" class="form-control" aria-label="Email" placeholder="Email" ngModel name="email" #email="ngModel">
     </div>
   </div>
   <div class="row my-3">
     <div class="col">
-      <input type="tel" class="form-control" aria-label="Phone number" placeholder="Phone number (optional)">
+      <input type="tel" class="form-control" aria-label="Phone number" placeholder="Phone number (optional)" ngModel name="phone" #phone="ngModel">
     </div>
   </div>
   <div class="row my-3">
     <div class="col">
-      <textarea class="form-control message" aria-label="Message" placeholder="Message..."></textarea>
+      <textarea required class="form-control message" aria-label="Message" placeholder="Message..." ngModel name="message" #message="ngModel"></textarea>
     </div>
   </div>
 

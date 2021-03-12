@@ -13,6 +13,7 @@ import { OctoprintPrivacyComponent } from './octoprint-privacy/octoprint-privacy
 import { OctoprintTosComponent } from './octoprint-tos/octoprint-tos.component';
 import { EmailMeComponent } from './email-me/email-me.component';
 import {RecaptchaModule} from 'ng-recaptcha';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {RecaptchaModule} from 'ng-recaptcha';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RecaptchaModule
+    RecaptchaModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
