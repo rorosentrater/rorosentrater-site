@@ -17,9 +17,9 @@ export class EmailMeComponent implements OnInit {
   resolved(captchaResponse: string) {
     console.log(`Frontend captcha token: ${captchaResponse}`);
     this.captcha = captchaResponse;
-    if (captchaResponse) { // captchaResponse is set to null on timeout so only req if we have a token
-      this.recaptchaService.checkRecaptcha(captchaResponse).subscribe(data => console.log('Backend response:', data));
-    }
+    // if (captchaResponse) { // captchaResponse is set to null on timeout so only req if we have a token
+    //   this.recaptchaService.checkRecaptcha(captchaResponse).subscribe(data => console.log('Backend response:', data));
+    // }
   }
 
   submit(formData) {
